@@ -284,7 +284,7 @@ html{
 }
 @keyframes htmlcss {
     0%{width: 0%;}
-    100%{width: 60%;}
+    100%{width: 55%;}
 }
 
 .skills .skill .photoshop{
@@ -293,7 +293,7 @@ html{
 }
 @keyframes photoshop {
     0%{width: 0%;}
-    100%{width: 60%;}
+    100%{width: 50%;}
 }
 
 .skills .skill .wordpress{
@@ -302,7 +302,7 @@ html{
 }
 @keyframes wordpress {
     0%{width: 0%;}
-    100%{width: 75%;}
+    100%{width: 70%;}
 }
 
 .skills .skill .drupal{
@@ -311,7 +311,7 @@ html{
 }
 @keyframes drupal {
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 60%;}
 }
 
 .skills .skill .comunicacion{
@@ -338,7 +338,7 @@ html{
 }
 @keyframes creatividad {
     0%{width: 0%;}
-    100%{width: 99%;}
+    100%{width: 90%;}
 }
 
 .skills .skill .dedicacion{
@@ -356,7 +356,7 @@ html{
 }
 @keyframes proyect {
     0%{width: 0%;}
-    100%{width: 94%;}
+    100%{width: 85%;}
 }
 /* SECCION CURRICULUM */
 .curriculum{
@@ -404,6 +404,7 @@ html{
     font-size: 20px;
     margin-bottom: 10px;
 }
+
 .curriculum .fila .item .casa{
     color: #b6481c;
     font-size: 22px;
@@ -426,6 +427,200 @@ html{
     border-left: 2px solid #b6481c;
     margin-left: 20px;
 }
+
+.carrusel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden; /* Oculta el contenido fuera del carrusel */
+    width: 100%; /* Tamaño del carrusel */
+    height: 70px; /* Ajusta según el tamaño de los íconos */
+    position: relative;
+}
+
+/* Ítems del carrusel */
+.carrusel-items {
+    display: flex;
+    gap: 30px; /* Espaciado entre íconos */
+    animation: scroll-seamless 8s linear infinite; /* Animación continua */
+    will-change: transform; /* Optimización para animaciones */
+}
+
+/* Íconos individuales */
+.carrusel-items i {
+    font-size: 40px; /* Tamaño de los íconos */
+    color: #444;
+    transition: transform 0.3s ease, color 0.3s ease; /* Efectos de hover */
+}
+
+.carrusel-items i:hover {
+    color: #b6481c;
+    transform: scale(1.2); /* Efecto de escala al pasar el cursor */
+}
+
+/* Colores personalizados para cada icono en el hover */
+
+/* Para JavaScript */
+.carrusel-items i.js:hover {
+    color: #f0db4f; /* Color en hover para JavaScript (amarillo) */
+}
+
+/* Para HTML5 */
+.carrusel-items i.html5:hover {
+    color: #e34f26; /* Color en hover para HTML5 (naranja) */
+}
+
+/* Para CSS3 */
+.carrusel-items i.css3:hover {
+    color: #264de4; /* Color en hover para CSS3 (azul) */
+}
+
+/* Para PHP */
+.carrusel-items i.php:hover {
+    color: #4f5b93; /* Color en hover para PHP (azul oscuro) */
+}
+
+/* Para Laravel */
+.carrusel-items i.laravel:hover {
+    color: #ff2d20; /* Color en hover para Laravel (rojo) */
+}
+
+/* Para MySQL */
+.carrusel-items i.mysql:hover {
+    color: #00758f; /* Color en hover para MySQL (azul claro) */
+}
+
+/* Animación sin interrupción */
+@keyframes scroll-seamless {
+    0% {
+        transform: translateX(0); /* Inicio del movimiento */
+    }
+    100% {
+        transform: translateX(-50%); /* Mueve la mitad para reiniciar */
+    }
+}
+
+/* Duplicar contenido dinámico */
+.carrusel-items::after {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Ocupa el mismo espacio que el contenido original */
+    flex-shrink: 0;
+}
+
+/* Extensión automática del contenido para loop */
+.carrusel-items::after {
+    content: ''; /* Para espacio adicional */
+    display: inline-block;
+    width: 100%; /* Repite el carrusel */
+    flex-shrink: 0;
+}
+
+/* SEGUNDO CARRUSEL*/
+.carrusel-contenedor {
+    display: flex;
+    gap: 35px; /* Espaciado entre íconos */
+    animation: scroll-seamless 8s linear infinite; /* Animación continua */
+    will-change: transform; /* Optimización para animaciones */
+}
+
+/* Íconos individuales */
+.carrusel-contenedor i {
+    font-size: 40px; /* Tamaño de los íconos */
+    color: #444;
+    transition: transform 0.3s ease, color 0.3s ease; /* Efectos de hover */
+}
+
+.carrusel-contenedor i:hover {
+    color: #b6481c;
+    transform: scale(1.2); /* Efecto de escala al pasar el cursor */
+}
+
+/* Colores personalizados para cada icono en el hover */
+
+/* Para JavaScript */
+.carrusel-contenedor i.js:hover {
+    color: #f0db4f; /* Color en hover para JavaScript (amarillo) */
+}
+
+/* Para HTML5 */
+.carrusel-contenedor i.html5:hover {
+    color: #e34f26; /* Color en hover para HTML5 (naranja) */
+}
+
+/* Para CSS3 */
+.carrusel-contenedor i.css3:hover {
+    color: #264ce7; /* Color en hover para CSS3 (azul) */
+}
+
+
+/* Duplicar contenido dinámico */
+.carrusel-contenedor::after {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Ocupa el mismo espacio que el contenido original */
+    flex-shrink: 0;
+}
+
+/* Extensión automática del contenido para loop */
+.carrusel-contenedor::after {
+    content: ''; /* Para espacio adicional */
+    display: inline-block;
+    width: 100%; /* Repite el carrusel */
+    flex-shrink: 0;
+}
+
+/*Tercer Carrusel*/
+.carrusel-conter {
+    display: flex;
+    gap: 35px; /* Espaciado entre íconos */
+    animation: scroll-seamless 8s linear infinite; /* Animación continua */
+    will-change: transform; /* Optimización para animaciones */
+}
+
+/* Íconos individuales */
+.carrusel-conter i {
+    font-size: 40px; /* Tamaño de los íconos */
+    color: #444;
+    transition: transform 0.3s ease, color 0.3s ease; /* Efectos de hover */
+}
+
+.carrusel-conter i:hover {
+    transform: scale(1.2); /* Efecto de escala al pasar el cursor */
+}
+
+/* Colores personalizados para cada icono en el hover */
+
+.carrusel-conter i.terminal:hover {
+    color: #f1f1f1; /* Gris claro para el icono terminal */
+}
+
+.carrusel-conter i.database:hover {
+    color: #0077b5; /* Color predeterminado para base de datos de Font Awesome */
+}
+
+.carrusel-conter i.node:hover {
+    color: #8cc84b; /* Verde de Node.js */
+}
+
+
+/* Duplicar contenido dinámico */
+.carrusel-conter::after {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Ocupa el mismo espacio que el contenido original */
+    flex-shrink: 0;
+}
+
+/* Extensión automática del contenido para loop */
+.carrusel-conter::after {
+    content: ''; /* Para espacio adicional */
+    display: inline-block;
+    width: 100%; /* Repite el carrusel */
+    flex-shrink: 0;
+}
+
+
 .curriculum .fila .item .conectori{
     height: 2px;
     background-color: #b6481c;
@@ -465,28 +660,91 @@ html{
     bottom: 4px;
 }
 
-/* SECCION PORTFOLIO */
-.portfolio{
+/* SECCION L A B O R A L */
+
+:root {
+    --main-span-color: #b6481c;
+    --main-shadow-color: #d55624;
+}
+
+.laboral {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
+    width: 100%; /* Aseguramos que ocupe el ancho completo */
 }
-.portfolio .contenido-seccion{
+
+.laboral .laboral-cargando {
+    display: flex;
+    flex-direction: column; /* Asegura que el título y los spans estén uno debajo del otro */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.laboral-cargando h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    padding: 20px 0;
+}
+
+.animacion-cargando {
+    font-size: 70px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: nowrap; /* Los spans estarán en una sola línea */
+    justify-content: center; /* Centra los spans */
+    white-space: nowrap; /* Evita el salto de línea en los spans */
+}
+
+.animacion-cargando span {
+    color: var(--main-span-color);
+    display: inline-block; /* Esto asegura que los elementos se comporten como bloques en línea */
+    animation: colorear 2s ease-in-out infinite; /* Animación infinita con duración suave */
+    margin: 0 5px; /* Añadido margen entre los spans */
+    animation-delay: calc(0.2s * var(--span-delay)); /* Retraso de animación escalonado */
+}
+
+/* Animación de color (suavizado y menos sombras) */
+@keyframes colorear {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 8px var(--main-shadow-color), 0 0 16px var(--main-shadow-color); /* Sombras más suaves */
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+/* SECCION PORTFOLIO */
+.portfolio {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.portfolio h2{
+
+.portfolio h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-.portfolio .galeria{
+
+.portfolio .galeria {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.portfolio .galeria .proyecto{
+
+.portfolio .galeria .proyecto {
     position: relative;
     width: 325px; /* Tamaño uniforme */
     height: 225px; /* Tamaño uniforme */
@@ -494,12 +752,15 @@ html{
     cursor: pointer;
     overflow: hidden; /* Ocultar contenido que sobresalga */
 }
-.portfolio .galeria .proyecto img{
+
+.portfolio .galeria .proyecto img {
     width: 100%; /* Asegura que la imagen ocupe el ancho del contenedor */
     height: 100%; /* Asegura que la imagen ocupe la altura del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin distorsionarse */
     display: block;
 }
-.portfolio .galeria .proyecto .overlay{
+
+.portfolio .galeria .proyecto .overlay {
     position: absolute;
     top: 0;
     width: 100%;
@@ -516,30 +777,33 @@ html{
 }
 
 .portfolio .galeria .proyecto .overlay a {
-    text-decoration: none; /* Quitar el subrayado del enlace */
-    color: #fff; /* Texto blanco para contraste */
-    background-color: #b6481c; /* Fondo acorde al gradiente */
-    padding: 10px 20px; /* Espaciado interno para el botón */
-    border-radius: 5px; /* Bordes redondeados para un diseño moderno */
-    display: inline-block; /* Asegura que el enlace se vea como un botón */
-    margin-top: 20px; /* Espacio entre el enlace y el texto superior */
-    font-size: 16px; /* Tamaño de fuente legible */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Suavidad en los efectos */
+    text-decoration: none; 
+    color: #fff; 
+    background-color: #b6481c; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    margin-top: 20px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio .galeria .proyecto .overlay a:hover {
-    background-color: #fff; /* Cambiar fondo al pasar el cursor */
-    color: #b6481c; /* Cambiar color del texto para contraste */
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+    background-color: #fff;
+    color: #b6481c;
+    transform: scale(1.05);
 }
-.portfolio .galeria .proyecto .overlay h3{
+
+.portfolio .galeria .proyecto .overlay h3 {
     margin-bottom: 20px;
     transition: 1s;
 }
-.portfolio .galeria .proyecto .overlay:hover{
+
+.portfolio .galeria .proyecto .overlay:hover {
     opacity: 1;
 }
-.portfolio .galeria .proyecto .overlay:hover h3{
+
+.portfolio .galeria .proyecto .overlay:hover h3 {
     margin-bottom: 0px;
 }
 
@@ -743,6 +1007,17 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+
+/* Prevenir scroll horizontal en pantallas pequeñas */
+html, body {
+    overflow-x: hidden; /* Esto evita el scroll horizontal */
+}
+
+/* Prevenir scroll horizontal en pantallas pequeñas */
+html, body {
+    overflow-x: hidden; /* Esto evita el scroll horizontal */
+}
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
     nav{
@@ -758,6 +1033,8 @@ footer .arriba{
         top: 75px;
         background-color: #252A2E;
         width: 180px;
+        max-width: 100%; /* Asegura que el nav no exceda el ancho de la pantalla */
+        box-sizing: border-box; /* Incluye los márgenes y rellenos en el ancho total */
     }
     nav.responsive ul{
         display: block !important;
@@ -795,15 +1072,14 @@ footer .arriba{
         margin-left: 20px;
     }
 
-    .portfolio .galeria{
-        display: block;
-        width: 100%;
+    .portfolio .galeria .proyecto {
+        width: 48%; /* Dos elementos por fila */
+        height: 200px;
+        margin: 10px 1%; /* Menos margen para que los elementos se ajusten mejor */
     }
-    .portfolio .galeria .proyecto{
-        max-width: 100%;
-    }
-    .portfolio .galeria .proyecto img{
-        width: 100%;
+
+    .portfolio .galeria .proyecto img {
+        height: 100%; /* Las imágenes siguen adaptándose al contenedor */
     }
 
     .certificado .galeria{
@@ -815,6 +1091,7 @@ footer .arriba{
     }
     .certificado .galeria .proyecto img{
         width: 100%;
+        max-width: 100%; /* Asegura que la imagen no se desborde */
     }
     .certificado .fila{
         display: block;
@@ -824,6 +1101,8 @@ footer .arriba{
     }
 
     .contacto .col iframe {
-        height: 250px; /* Reduce la altura para pantallas pequeñas */
+        height: 100%; /* Reduce la altura para pantallas pequeñas */
+        width: 100%; /* Asegura que el iframe se ajuste correctamente */
+        max-width: 100%; /* Evita que se desborde */
     }
 }
