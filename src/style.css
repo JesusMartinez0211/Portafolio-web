@@ -1059,13 +1059,44 @@ html, body {
     }
 }
 @media screen and (max-width:700px){
-    .sobremi .fila{
+    .sobremi .fila {
         display: block;
-    }
-    .sobremi .fila .col{
-        width: fit-content;
+        text-align: center; /* Centra todo el contenido de la fila */
     }
 
+    .sobremi .fila .col {
+        width: 100%; /* Hace que las columnas ocupen todo el ancho disponible */
+        margin: 0 auto; /* Centra las columnas */
+    }
+
+    /* Centrar el título de cada columna */
+    .sobremi .fila .col h3 {
+        text-align: center; /* Centra el título de "Datos Personales" e "Intereses" */
+    }
+
+    /* Estilos para los intereses */
+    .contenedor-intereses {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra los intereses */
+        margin: 0 auto; /* Asegura que el contenedor esté centrado */
+    }
+
+    .interes {
+        margin: 10px; /* Espacio entre los intereses */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el icono y el texto */
+    }
+
+    .interes i {
+        font-size: 30px; /* Ajusta el tamaño del icono */
+    }
+
+    .interes span {
+        margin-top: 5px; /* Espacio entre el icono y el texto */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
     .skills .fila{
         display: block;
     }
@@ -1085,6 +1116,42 @@ html, body {
     .curriculum .fila .derecha{
         margin-left: 20px;
     }
+
+    @media screen and (max-width: 700px) {
+        /* Centrar el título en pantallas pequeñas */
+        .laboral h2 {
+            text-align: center;
+            font-size: 1.7rem; /* Ajustar el tamaño del título */
+        }
+    
+        /* Centrar el contenedor de la animación de carga */
+        .laboral-cargando {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        /* Ajustar el estilo de la animación de carga */
+        .animacion-cargando {
+            display: flex;
+            flex-wrap: wrap; /* Permitir que las letras se ajusten a nuevas líneas si es necesario */
+            justify-content: center; /* Centrar las letras */
+            margin-top: 20px;
+        }
+    
+        .animacion-cargando span {
+            font-size: 2.2rem; /* Reducir el tamaño de las letras en pantallas pequeñas */
+            margin: 0 2px; /* Espaciado entre las letras */
+        }
+    
+        /* Reducir el tamaño de la animación si es necesario en pantallas más pequeñas */
+        .animacion-cargando span {
+            animation-delay: calc(0.2s * var(--span-delay)); /* Retraso de animación escalonado */
+        }
+
+
+
 
     .portfolio .galeria .proyecto {
         width: 48%; /* Dos elementos por fila */
@@ -1113,10 +1180,15 @@ html, body {
     .contacto .fila .col{
         width: 100%;
     }
+     /* Ocultar la sección de info en pantallas pequeñas */
+    .contacto .info {
+        display: none;
+    }
 
     .contacto .col iframe {
         height: 100%; /* Reduce la altura para pantallas pequeñas */
         width: 100%; /* Asegura que el iframe se ajuste correctamente */
         max-width: 100%; /* Evita que se desborde */
     }
+}
 }
